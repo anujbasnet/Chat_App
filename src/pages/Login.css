@@ -1,5 +1,19 @@
-.login{
-    background-color: #ffffff;
-    padding: 2%;
+.Login{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../assets/images/BackGround.png') no-repeat center center;
+    background-size: cover;
+    margin:0%;
+    padding:0%;
+}
+.glass{
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 7%;
+    width: 20%;
+    height: 60%;  
+    backdrop-filter: blur(6px);
     
 }
