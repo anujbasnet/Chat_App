@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('../assets/fonts/Gilroy-Bold.ttf');
+}
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('../assets/fonts/Gilroy-Medium.ttf');
+}
 .Login{
     width:100vw;
     height:100vh;
@@ -15,5 +23,36 @@
     width: 20%;
     height: 60%;  
     backdrop-filter: blur(6px);
-    
+    align-items: center;
+}
+.FormDiv{
+        padding-left: 60px;
+}
+.inputField{
+    font-family: 'Gilroy-Medium', sans-serif;
+    border-radius:5px;
+    padding:8px;
+    border:0;
+    outline: 0;
+    color:rgb(138, 140, 142);
+}
+.inputField::placeholder{
+    color:rgb(181, 184, 187);
+}
+.SmallFonts{
+    color: white;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size:13px;
+}
+.button{
+    background-color: #003465;
+    font-family: 'Gilroy-Bold', sans-serif;
+    color: white;
+    border-radius:5px;
+    padding:8px;
+    border:0;
+    outline: 0;
+    text-align: center;
+    width: 175px;
+
 }
