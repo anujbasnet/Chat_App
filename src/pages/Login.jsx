@@ -1,28 +1,22 @@
 import React from "react";
 import "./Login.css";
-import Background from "../assets/images/BackGround.png";
+import Github from '../assets/images/github-mark.png'
+import Google from '../assets/images/Google__G__logo.svg'
+import Facebook from '../assets/images/facebook.png'
 function Login() {
   return (
     <div className="Login">
       <div className="glass">
         <div style={{ textAlign: "center" }}>
           <h3
-            style={{
-              color: "white",
-              fontFamily: "Gilroy-Bold, sans-serif",
-              fontSize: "24px",
-            }}
+           className="heading"
           >
             CHIT CHAT
           </h3>
         </div>
         <div className="FormDiv">
           <h3
-            style={{
-              color: "white",
-              fontFamily: "Gilroy-Bold, sans-serif",
-              fontSize: "24px",
-            }}
+            className="heading"
           >
             Login
           </h3>
@@ -61,6 +55,33 @@ function Login() {
             }}>
             or continue with
           </p>
+          </div>
+          <div className="signupWith">
+            <p className="signupWith_Button">
+              <img src={Google} className="Icon" />
+            </p>
+            <p className="signupWith_Button">
+              <img src={Github} className="Icon" />
+            </p>
+             <p className="signupWith_Button">
+              <img src={Facebook} className="Icon" />
+            </p>
+          </div>
+          <div style={{display:'flex',paddingLeft:'60px'}}>
+          <p style={{
+              color: "white",
+              fontFamily: "Gilroy-Medium, sans-serif",
+              fontSize: "10px",
+            }}>
+            Don't have an account yet?
+          </p>
+          
+          <p style={{
+              color: "white",
+              fontFamily: "Gilroy-Medium, sans-serif",
+              fontSize: "10px",
+              fontWeight:'bold',
+            }}> Register for free</p>
           </div>
       </div>
     </div>

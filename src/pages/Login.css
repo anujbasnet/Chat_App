@@ -25,6 +25,11 @@
     backdrop-filter: blur(6px);
     align-items: center;
 }
+.heading{
+    color:white;
+    font-family: 'Gilroy-Bold',sans-serif;
+    font-size: medium;
+}
 .FormDiv{
         padding-left: 60px;
 }
@@ -55,4 +60,23 @@
     text-align: center;
     width: 175px;
 
+}
+.signupWith{
+    display: flex;
+    padding-left: 60px;
+    gap: 20px;
+
+}
+.signupWith_Button{
+    height: 25px;
+    width: 45px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Icon{
+    height: 15px;
+    width: 15px;
 }
