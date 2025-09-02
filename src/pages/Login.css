@@ -49,6 +49,14 @@
     font-family: 'Gilroy-Medium', sans-serif;
     font-size:13px;
 }
+.SmallFontsUse{
+    color: white;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size:13px;
+}
+.SmallFontsUse:hover{
+    cursor: pointer;
+}
 .button{
     background-color: #003465;
     font-family: 'Gilroy-Bold', sans-serif;
@@ -60,6 +68,10 @@
     text-align: center;
     width: 175px;
 
+}
+.button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 20px 5px #0158a9;
 }
 .signupWith{
     display: flex;
@@ -76,7 +88,20 @@
     align-items: center;
     justify-content: center;
 }
+.signupWith_Button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 20px 5px #0158a9;
+}
 .Icon{
     height: 15px;
     width: 15px;
+}
+.Register{
+    color: white;
+    font-family: Gilroy-Bold,sans-serif;
+    font-size: 10px;
+}
+.Register:hover{
+    cursor: pointer;
+    box-shadow: 0 0 20px 5px #0158a9;
 }
