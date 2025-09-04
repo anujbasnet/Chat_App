@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('../assets/fonts/Gilroy-Bold.ttf');
+}
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('../assets/fonts/Gilroy-Medium.ttf');
+}
+.Login{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../assets/images/BackGround.png') no-repeat center center;
+    background-size: cover;
+    margin:0%;
+    padding:0%;
+}
+.glass{
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 7%;
+    width: 20%;
+    height: 60%;  
+    backdrop-filter: blur(6px);
+    align-items: center;
+}
+.heading{
+    color:white;
+    font-family: 'Gilroy-Bold',sans-serif;
+    font-size: medium;
+}
+.FormDiv{
+        padding-left: 60px;
+}
+.inputField{
+    font-family: 'Gilroy-Medium', sans-serif;
+    border-radius:5px;
+    padding:8px;
+    border:0;
+    outline: 0;
+    color:rgb(138, 140, 142);
+}
+.inputField::placeholder{
+    color:rgb(181, 184, 187);
+}
+.SmallFonts{
+    color: white;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size:13px;
+}
+.SmallFontsUse{
+    color: white;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size:13px;
+}
+.SmallFontsUse:hover{
+    cursor: pointer;
+}
+.button{
+    background-color: #003465;
+    font-family: 'Gilroy-Bold', sans-serif;
+    color: white;
+    border-radius:5px;
+    padding:8px;
+    border:0;
+    outline: 0;
+    text-align: center;
+    width: 175px;
+    margin-top:20px;
+
+}
+.button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 20px 5px #0158a9;
+}
+.signupWith{
+    display: flex;
+    padding-left: 60px;
+    gap: 20px;
+
+}
+.signupWith_Button{
+    height: 25px;
+    width: 45px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signupWith_Button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 20px 5px #0158a9;
+}
+.Icon{
+    height: 15px;
+    width: 15px;
+}
+.Register{
+    color: white;
+    font-family: Gilroy-Bold,sans-serif;
+    font-size: 10px;
+}
+.Register:hover{
+    cursor: pointer;
+    box-shadow: 0 0 20px 5px #0158a9;
+}
