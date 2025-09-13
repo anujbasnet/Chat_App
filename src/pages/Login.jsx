@@ -21,7 +21,7 @@ function Login() {
   }
   return (
     <div className="Login">
-      <div className="glass">
+      <form className="glass">
         <div style={{ textAlign: "center" }}>
           <h3 className="heading">CHIT CHAT</h3>
         </div>
@@ -94,7 +94,7 @@ function Login() {
             Register for free
           </p>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
