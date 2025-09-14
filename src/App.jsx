@@ -2,6 +2,7 @@ import './App.css'
 import Login from './pages/Login.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Register from './pages/Register.jsx'
+import Verify from './pages/Verify.jsx'
 function App() {
 
   return (
@@ -10,6 +11,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Login />}/>
           <Route path='/Register' element={<Register />}/>
+          <Route path='/Verify' element={<Verify />}/>
+          <Route path='/Login' element={<Login />}/>
         </Routes>
       </Router>
     </div>

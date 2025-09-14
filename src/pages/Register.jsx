@@ -12,6 +12,9 @@ function Register() {
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
   const [ConfirmPassword, setConfirmPassword] = useState("");
+  const gotoVerifty=()=>{
+    navigate('/Verify')
+  }
 
   const getData = async () => {
     try {
@@ -23,6 +26,7 @@ function Register() {
       },);
       console.log(Username,Email,Password)
       alert(res.data.message);
+      gotoVerifty();
     } catch (err) {
       console.error(err.response.data);
       alert(err.response.data.message || "Error occurred");
@@ -72,6 +76,7 @@ function Register() {
             className="button"
             onClick={() => {
               getData();
+              
             }}
           >
             Register

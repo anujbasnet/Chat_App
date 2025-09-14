@@ -30,13 +30,9 @@
     font-family: 'Gilroy-Bold',sans-serif;
     font-size: medium;
 }
-.FormDiv{
-        padding-left: 60px;
-}
 .inputField{
     font-family: 'Gilroy-Medium', sans-serif;
     border-radius:5px;
-    padding:8px;
     border:0;
     outline: 0;
     color:rgb(138, 140, 142);
@@ -62,12 +58,10 @@
     font-family: 'Gilroy-Bold', sans-serif;
     color: white;
     border-radius:5px;
-    padding:8px;
     border:0;
     outline: 0;
     text-align: center;
     width: 175px;
-
 }
 .button:hover{
     cursor: pointer;
@@ -75,9 +69,7 @@
 }
 .signupWith{
     display: flex;
-    padding-left: 60px;
     gap: 20px;
-
 }
 .signupWith_Button{
     height: 25px;

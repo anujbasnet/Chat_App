@@ -43,7 +43,6 @@ function Login() {
             type="password"
             onChange={(e)=>setPassword(e.target.value)}
           />
-          <br />
           <p className="SmallFontsUse">Forgot Password?</p>
           <button
             className="button"

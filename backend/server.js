@@ -3,7 +3,6 @@ import mongoose from "mongoose";
 import express from "express";
 import cors from "cors";
 import fs from "fs";
-import { stringify } from "querystring";
 import nodemailer from "nodemailer";
 const app = express();
 app.use(express.json());
@@ -20,7 +19,7 @@ app.post("/Register", async (req, res) => {
       return res.json({ message: "Invalid Email format" });
     }
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    if(!passwordRegex.test(Password) && !passwordRegex.test(Password)){
+    if(!passwordRegex.test(Password)){
       return res.json({message:"Invalid Password format"})
     }
     if (Password !== ConfirmPassword) {
