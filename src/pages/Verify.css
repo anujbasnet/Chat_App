@@ -1,0 +1,33 @@
+.VerifyOTPinput {
+  flex-direction: row;
+  gap: 10px;
+}
+.VerifyOTPinputbox {
+    margin-top: 50px;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  border-radius: 5px;
+  border-width: 0px;
+}
+.VerifyOTPinputbox:focus {
+  outline: none;
+}
+.Verify_button {
+  background-color: #003465;
+  font-family: "Gilroy-Bold", sans-serif;
+  color: white;
+  border-radius: 5px;
+  padding: 8px;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  width: 175px;
+  margin-top: 100px;
+  margin-left: 10px;
+}
+.Verify_button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 20px 5px #0158a9;
+}

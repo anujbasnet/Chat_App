@@ -5,7 +5,7 @@ import Google from "../assets/images/Google__G__logo.svg";
 import Facebook from "../assets/images/facebook.png";
 import { useNavigate } from "react-router-dom";
 function Login() {
-  const navigate =useNavigate();
+  const navigate = useNavigate();
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
   const setnewEmail = () => {
@@ -16,9 +16,12 @@ function Login() {
     console.log(Password);
     setPassword("");
   };
-  const goto_Register=()=>{
-    navigate('/Register');
-  }
+  const goto_Register = () => {
+    navigate("/Register");
+  };
+  const gotoChat = () => {
+    navigate("/Chats");
+  };
   return (
     <div className="Login">
       <form className="glass">
@@ -37,16 +40,17 @@ function Login() {
           />
           <p className="SmallFonts">Password</p>
           <input
-          value={Password}
+            value={Password}
             placeholder="Enter your password"
             className="inputField"
             type="password"
-            onChange={(e)=>setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <p className="SmallFontsUse">Forgot Password?</p>
           <button
             className="button"
             onClick={() => {
+              gotoChat();
               setnewEmail();
               setnewPassword();
             }}
@@ -85,10 +89,12 @@ function Login() {
             }}
           >
             Don't have an account yet?
-          </p> 
+          </p>
           <p
             className="Register"
-            onClick={goto_Register}
+            onClick={() => {
+              goto_Register();
+            }}
           >
             Register for free
           </p>

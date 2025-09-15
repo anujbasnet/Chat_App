@@ -1,5 +1,6 @@
 import bcrypt from "bcrypt";
 import mongoose from "mongoose";
+import http from "http";
 import express from "express";
 import cors from "cors";
 import fs from "fs";
@@ -18,14 +19,14 @@ app.post("/Register", async (req, res) => {
     if (!emailRegex.test(Email)) {
       return res.json({ message: "Invalid Email format" });
     }
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    if(!passwordRegex.test(Password)){
-      return res.json({message:"Invalid Password format"})
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (!passwordRegex.test(Password)) {
+      return res.json({ message: "Invalid Password format" });
     }
     if (Password !== ConfirmPassword) {
       return res.json({ message: "Password donot match" });
     }
-    
 
     let data = [];
     if (fs.existsSync("./data.json")) {
@@ -44,26 +45,39 @@ app.post("/Register", async (req, res) => {
       password: Password,
     });
     fs.writeFileSync("./data.json", JSON.stringify(data, null, 2));
-     const code = Math.floor(100000 + Math.random() * 900000).toString();
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "odd1squad@gmail.com",
-      pass: "snck tsrc wxni jnmr",
-    },
-  });
-  await transporter.sendMail({
-    from: "odd1squad@gmail.com",
-    to: Email,
-    subject: "Your Verification Code",
-    html: `<p>Your 6-digit code is: <strong>${code}</strong></p>`,
-  });
+    const code = Math.floor(100000 + Math.random() * 900000).toString();
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: "odd1squad@gmail.com",
+        pass: "snck tsrc wxni jnmr",
+      },
+    });
+    await transporter.sendMail({
+      from: "odd1squad@gmail.com",
+      to: Email,
+      subject: "Your Verification Code",
+      html: `<p>Your 6-digit code is: <strong>${code}</strong></p>`,
+    });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
- 
 });
-
+app.post("/Verify", async (req, res) => {
+  try {
+    const sendCode= await res.body.code
+    return res.json({ message: "Got code", Code: sendCode});
+  } catch (error) {
+    console.log("Error occured: ", error);
+  }
+});
 app.listen(5000, () => {
   console.log("Server is running at 5000");
 });
+
+
+
+const server=http.createServer(app);
+app.listen(9000,()=>{
+  console.log("Server is running at 9000")
+})
